@@ -29,6 +29,7 @@ LOCAL_SRC_FILES += \
     HAL/QCameraPostProc.cpp \
     HAL/QCamera2HWICallbacks.cpp \
     HAL/QCameraParameters.cpp \
+    HAL/CameraParameters.cpp \
     HAL/QCameraThermalAdapter.cpp
 
 LOCAL_CFLAGS := -Wall -Wextra -Werror
@@ -67,9 +68,11 @@ LOCAL_C_INCLUDES += \
 LOCAL_HEADER_LIBRARIES := display_headers generated_kernel_headers
 
 
-LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl
+LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libstagefrighthw
+
+LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
