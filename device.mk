@@ -19,6 +19,9 @@ $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/oneplus/oneplus2
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \

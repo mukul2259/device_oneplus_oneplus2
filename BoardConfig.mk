@@ -122,7 +122,7 @@ DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_oneplus2
+TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_oneplus2
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # IPA
