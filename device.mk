@@ -189,8 +189,13 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
+    ims_ext_common.xml \
     libshims_ims \
     libshims_boringssl
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
