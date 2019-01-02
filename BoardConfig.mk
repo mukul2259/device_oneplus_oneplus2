@@ -186,6 +186,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+WITH_DEXPREOPT_DEBUG_INFO := false
+DONT_DEXPREOPT_PREBUILTS := true
+USE_DEX2OAT_DEBUG := false
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
