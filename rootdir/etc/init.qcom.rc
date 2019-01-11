@@ -377,7 +377,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
 on property:init.svc.qcamerasvr=running
     restart media
 
-service qseecomd /vendor/bin/qseecomd
+service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
