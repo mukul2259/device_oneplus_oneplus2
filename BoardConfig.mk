@@ -39,7 +39,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8994
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno430
 
 # Architecture
 TARGET_ARCH := arm64
