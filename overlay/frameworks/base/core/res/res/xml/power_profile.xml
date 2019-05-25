@@ -69,8 +69,8 @@
         <value>1766000</value> <!-- 1766 MHz CPU speed -->
     </array>
     <!-- Power consumption when CPU is idle -->
-    <item name="cpu.idle">5.58</item>
-    <item name="cpu.awake">4.92</item>
+    <item name="cpu.suspend">5.58</item>
+    <item name="cpu.idle">4.92</item>
     <!-- Power consumption at different speeds -->
     <array name="cpu.active.cluster0">
         <value>24.14</value> <!-- 384 MHz CPU speed -->
