@@ -62,6 +62,9 @@ persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.spkr.cal.duration=0
 qcom.hw.aac.encoder=true
 
+# Charger
+ro.charger.disable_init_blank=true
+
 # Dalvik heap
 dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.75

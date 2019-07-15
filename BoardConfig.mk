@@ -103,9 +103,6 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=22
 
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
 # Display
 TARGET_SCREEN_DENSITY := 480
 
