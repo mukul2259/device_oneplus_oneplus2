@@ -72,6 +72,12 @@ persist.metadata_dynfps.disable=true
 ro.opengles.version=196610
 ro.qualcomm.cabl=0
 
+# IMS
+persist.ims.disableADBLogs=1
+persist.ims.disableDebugLogs=1
+persist.ims.disableIMSLogs=1
+persist.ims.disableQXDMLogs=1
+
 # OEM Unlocking
 ro.oem_unlock_supported=1
 
