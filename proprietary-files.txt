@@ -427,8 +427,6 @@ vendor/lib64/libxml.so
 vendor/qcril.db
 
 # Radio - IMS - MIUI Hydrogen 7.7.6 global dev
-bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon|896a7d67d73f9c0ef0f48f86af0e055737c781df
-bin/imscmservice:vendor/bin/imscmservice|c606b123bdd105866947a9ae19aab05349ad2dfd
 bin/imsdatadaemon:vendor/bin/imsdatadaemon|2aa4067b74fe525411984f87666d81c5b6b575d3
 bin/imsqmidaemon:vendor/bin/imsqmidaemon|88886668eda7b7303b4a7aefd5b8b3fbffd81b02
 etc/permissions/imscm.xml|8b99ec26c783966bbea1fcb8e72c7c0206a4e802
