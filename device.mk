@@ -342,5 +342,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
