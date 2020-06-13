@@ -153,3 +153,6 @@ persist.data.iwlan.enable=false
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
