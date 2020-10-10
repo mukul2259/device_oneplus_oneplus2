@@ -34,10 +34,7 @@
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
-
-using android::init::property_set;
 
 // copied from build/tools/releasetools/ota_from_target_files.py
 // but with "." at the end and empty entry
@@ -77,26 +74,26 @@ void vendor_load_properties() {
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "model", "ONE A2001");
         }
-        property_set("ro.rf_version", "TDD_FDD_Ch_All");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.telephony.default_network", "20,20");
+        property_override("ro.rf_version", "TDD_FDD_Ch_All");
+        property_override("telephony.lteOnCdmaDevice", "1");
+        property_override("ro.telephony.default_network", "20,20");
         break;
     case 24:
         /* Europe / Asia model */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "model", "ONE A2003");
         }
-        property_set("ro.rf_version", "TDD_FDD_Eu");
-        property_set("ro.telephony.default_network", "9,9");
+        property_override("ro.rf_version", "TDD_FDD_Eu");
+        property_override("ro.telephony.default_network", "9,9");
         break;
     case 34:
         /* America model */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "model", "ONE A2005");
         }
-        property_set("ro.rf_version", "TDD_FDD_Am");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.telephony.default_network", "9,9");
+        property_override("ro.rf_version", "TDD_FDD_Am");
+        property_override("telephony.lteOnCdmaDevice", "1");
+        property_override("ro.telephony.default_network", "9,9");
         break;
     default:
         LOG(ERROR) << __func__ << ": unexcepted rf version!";
@@ -111,11 +108,11 @@ void vendor_load_properties() {
     sysinfo(&sys);
     if (sys.totalram > 3072ull * 1024 * 1024) {
         /* Values for 4GB RAM vatiants */
-        property_set("dalvik.vm.heapgrowthlimit", "288m");
-        property_set("dalvik.vm.heapsize", "768m");
+        property_override("dalvik.vm.heapgrowthlimit", "288m");
+        property_override("dalvik.vm.heapsize", "768m");
     } else {
         /* Values for 3GB RAM vatiants */
-        property_set("dalvik.vm.heapgrowthlimit", "192m");
-        property_set("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heapgrowthlimit", "192m");
+        property_override("dalvik.vm.heapsize", "512m");
     }
 }
