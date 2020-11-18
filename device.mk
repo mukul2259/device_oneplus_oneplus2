@@ -169,6 +169,15 @@ PRODUCT_PACKAGES += \
     izat.conf \
     sap.conf
 
+# IMS
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    ims-ext-common \
+    libshims_ims
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # IRQ Balance
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf

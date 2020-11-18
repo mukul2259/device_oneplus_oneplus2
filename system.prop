@@ -73,6 +73,11 @@ ro.opengles.version=196610
 ro.qualcomm.cabl=0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.dbg.wfc_avail_ovr=0
+
 # OEM Unlocking
 ro.oem_unlock_supported=1
 
@@ -138,3 +143,6 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Vendor security patch level
 ro.lineage.build.vendor_security_patch=2017-10-01
+
+# Wifi
+persist.data.iwlan.enable=false
