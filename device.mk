@@ -53,9 +53,7 @@ PRODUCT_COPY_FILES += \
 
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
