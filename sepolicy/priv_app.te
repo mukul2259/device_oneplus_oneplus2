@@ -1,1 +1,2 @@
 allow priv_app rfs_system_file:dir getattr;
+allow priv_app hal_memtrack_default:hwservice_manager find;
