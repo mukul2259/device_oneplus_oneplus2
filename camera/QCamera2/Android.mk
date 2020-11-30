@@ -64,7 +64,7 @@ LOCAL_C_INCLUDES += \
     frameworks/native/include/media/hardware \
     $(LOCAL_PATH)/HAL
 
-LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+LOCAL_HEADER_LIBRARIES := display_headers generated_kernel_headers
 
 
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl
