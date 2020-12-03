@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
     libshim_atomic \
     sensors.hal.tof
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
