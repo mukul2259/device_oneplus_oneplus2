@@ -130,3 +130,6 @@
 
 # Touch features
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus2     u:object_r:hal_lineage_touch_default_exec:s0
+
+# Vulkan
+/(vendor|system/vendor)/lib(64)?/vulkan\.[a-z0-9]*\.so             u:object_r:same_process_hal_file:s0
