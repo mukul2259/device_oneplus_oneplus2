@@ -163,6 +163,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
     /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so
