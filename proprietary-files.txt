@@ -432,7 +432,6 @@ bin/imsqmidaemon:vendor/bin/imsqmidaemon|88886668eda7b7303b4a7aefd5b8b3fbffd81b0
 etc/permissions/imscm.xml|8b99ec26c783966bbea1fcb8e72c7c0206a4e802
 framework/imscmlibrary.jar|0c24d6540c06efede52169c1445272f43748180f
 framework/rcsimssettings.jar|566a0f637344ca3182aca33753e404977fc77ecc
--vendor/app/ims/ims.apk|0f9f714e31305dc293aa3e72ba19d24e8a6b11ae
 -vendor/app/imssettings/imssettings.apk|cd206ecfdf8b9c738823104e13672707cb48ffd1
 vendor/lib64/lib-dplmedia.so|45de23a1bf2c758e71556b88fa01e1f705775b96
 vendor/lib64/lib-ims-rcscmjni.so|57a7cffdf589247b7fa38082418076e491b306ca
@@ -452,10 +451,13 @@ vendor/lib64/lib-rtpcommon.so|16d49c1c1475a4fe9b3d2f7632bc4f199a87c4ce
 vendor/lib64/lib-rtpcore.so|7ebfa9d640984dbee4e5287a86883c991089497a
 vendor/lib64/lib-rtpdaemoninterface.so|f1f72a6a131830d3c71405362e975f61bb53386f
 vendor/lib64/lib-rtpsl.so|6a7f9f2fc38c210ffa9235bb0d61e18b6871a5dd
-vendor/lib64/libimscamera_jni.so|53000f12da581742742fbf80a2d46616d4b4283e
-vendor/lib64/libimsmedia_jni.so|35be419f4fabc1e2388c7cc01e95442f1f90e833
 vendor/lib64/librcc.so|661771f4b6c5f26037cc0fb5de83a86c08023995
 vendor/lib64/libvoice-svc.so|238f774a4d0748c40569f6c3c48a87578f79c265
+
+# Radio - IMS - from marlin-user-10-QP1A.191005.007
+-vendor/app/ims/ims.apk|9573e35381613673cdf03a71be21770dfea5590a
+vendor/lib64/libimscamera_jni.so|7fcd8ddaa6748d8de5de7d49cf5403cb050f4c34
+vendor/lib64/libimsmedia_jni.so|e6b526325e00bb3f80a80b64bd5756c286840009
 
 # Sensors - OxygenOS 3.6.0
 bin/sensors.qcom:vendor/bin/sensors.qcom
