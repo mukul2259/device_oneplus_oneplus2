@@ -66,6 +66,7 @@ persist.hwc.enable_vds=1
 persist.hwc.mdpcomp.enable=true
 persist.hwc.mdpcomp.maxpermixer=5
 persist.hwc.ptor.enable=true
+persist.hwc.pubypass=true
 persist.mdpcomp.4k2kSplit=1
 persist.mdpcomp_perfhint=50
 persist.metadata_dynfps.disable=true
