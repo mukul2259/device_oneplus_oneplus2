@@ -371,20 +371,20 @@ service perfd /vendor/bin/perfd
     user root
     group root system readproc
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service per_mgr /vendor/bin/pm-service
     class late_start
     user system
     group system
     ioprio rt 4
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service per_proxy /vendor/bin/pm-proxy
     class late_start
     user system
     group system net_raw
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
     disabled
 
 on property:init.svc.per_mgr=running
@@ -400,13 +400,13 @@ service thermal-engine /vendor/bin/thermal-engine
     socket thermal-recv-client stream 0660 system system
     socket thermal-recv-passive-client stream 0666 system system
     group root
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
@@ -467,7 +467,7 @@ service ppd /vendor/bin/mm-pp-daemon
     user system
     socket pps stream 0660 system system
     group system graphics
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:vold.decrypt=trigger_restart_framework
     start config_bluetooth
@@ -486,13 +486,13 @@ service rmt_storage /vendor/bin/rmt_storage
     group root system wakelock
     shutdown critical
     ioprio rt 0
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service rfs_access /vendor/bin/rfs_access
     class core
     user root
     group system net_raw
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:vendor.wc_transport.start_hci=true
     start start_hci_filter
@@ -506,7 +506,7 @@ service start_hci_filter /vendor/bin/wcnss_filter
     user bluetooth
     group bluetooth oem_2950 system wakelock
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service config_bluetooth /vendor/bin/init.qcom.bt.sh "onboot"
     class core
@@ -561,26 +561,26 @@ service qmuxd /vendor/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps oem_2950
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root system wifi wakelock radio inet oem_2950
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qti /vendor/bin/qti
     class main
     user radio
     group radio net_raw oem_2950 usb net_admin
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service sensors /vendor/bin/sensors.qcom
     class late_start
@@ -633,7 +633,7 @@ service ftm_ffbm /system/bin/ftmdaemon
 
 service cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service drmdiag /system/bin/drmdiagapp
     class late_start
@@ -715,7 +715,7 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     user root
     group root
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service program_bdaddr /vendor/bin/init.program_bdaddr.sh
     user bluetooth
