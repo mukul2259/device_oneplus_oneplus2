@@ -340,7 +340,7 @@ bin/pm-service:vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so|a2d0d11de098d1b3d02218b087868b4fbc2ba466
 
 # Postprocessing - OxygenOS 3.6.0
-bin/mm-pp-daemon:vendor/bin/mm-pp-daemon
+bin/mm-pp-daemon:vendor/bin/mm-pp-daemon|6dcf0e841f47b24d6a0e223bf597f5dc186939b4
 vendor/lib/libdisp-aba.so
 vendor/lib/libmm-abl-oem.so
 -vendor/lib/libmm-abl.so
