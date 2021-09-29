@@ -141,6 +141,10 @@ ro.qc.sdk.sensors.gestures=true
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8994
+
 # Surfaceflinger
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
