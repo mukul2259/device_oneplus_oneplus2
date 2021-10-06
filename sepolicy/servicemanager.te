@@ -1,0 +1,1 @@
+allow servicemanager hal_power_default:dir { search };
