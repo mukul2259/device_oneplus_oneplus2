@@ -1,4 +1,5 @@
 get_prop(system_server, userspace_reboot_exported_prop)
 get_prop(system_server, userspace_reboot_config_prop)
+get_prop(system_server, exported_camera_prop)
 
 allow system_server hal_light_default:process { signal };
