@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common_system \
     ims_ext_common.xml \
+    lib-imsvtshim \
     libshims_ims \
     libshims_boringssl
 
