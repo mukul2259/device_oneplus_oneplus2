@@ -1,1 +1,3 @@
 allow netmgrd hal_cne_hwservice:hwservice_manager find;
+
+allow netmgrd self:capability { sys_resource };
