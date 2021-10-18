@@ -156,3 +156,6 @@ ro.vndk.version=current
 
 # Wifi
 persist.data.iwlan.enable=false
+
+# XML
+persist.sys.binary_xml=false
