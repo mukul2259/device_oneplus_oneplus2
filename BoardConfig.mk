@@ -151,7 +151,6 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap"
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
-MALLOC_SVELTE := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oneplus2
