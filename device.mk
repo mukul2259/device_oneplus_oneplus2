@@ -203,6 +203,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
+# IMS
+PRODUCT_PACKAGES += \
+    libshims_postproc
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext \
