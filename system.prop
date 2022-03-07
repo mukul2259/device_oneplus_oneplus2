@@ -28,6 +28,9 @@ ro.config.vc_call_vol_steps=7
 bluetooth.enable_timeout_ms=12000
 vendor.qcom.bluetooth.soc=rome
 
+# BPF
+ro.kernel.ebpf.supported=false
+
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.HAL3.enabled=1
