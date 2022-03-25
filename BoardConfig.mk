@@ -21,6 +21,10 @@
 # definition file).
 #
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
 PLATFORM_PATH := device/oneplus/oneplus2
