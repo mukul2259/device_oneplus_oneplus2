@@ -25,6 +25,7 @@ ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
 # Bluetooth
+bluetooth.device.default_name=OnePlus 2
 bluetooth.enable_timeout_ms=12000
 vendor.qcom.bluetooth.soc=rome
 
