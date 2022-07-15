@@ -93,6 +93,7 @@ persist.hwc.mdpcomp.enable=true
 persist.hwc.mdpcomp.maxpermixer=5
 persist.hwc.ptor.enable=true
 persist.hwc.pubypass=true
+persist.log.tag.OpenGLRenderer=S
 persist.mdpcomp.4k2kSplit=1
 persist.mdpcomp_perfhint=50
 persist.metadata_dynfps.disable=true
