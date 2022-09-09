@@ -27,7 +27,7 @@ def IncrementalOTA_Assertions(info):
   return
 
 def AddBasebandAssertion(info, input_zip):
-  android_info = input_zip.read("OTA/android-info.txt")
+  android_info = input_zip.read("OTA/android-info.txt").decode('UTF-8')
   m = re.search(r'require\s+version-baseband\s*=\s*(.+)', android_info)
   if m:
     timestamp, firmware_version = m.group(1).rstrip().split(',')
