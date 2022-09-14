@@ -242,9 +242,6 @@
         <item>"evdo:4094,87380,524288,4096,16384,262144"</item>
     </string-array>
 
-    <!-- Operating volatage for bluetooth controller. -->
-    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
-
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
