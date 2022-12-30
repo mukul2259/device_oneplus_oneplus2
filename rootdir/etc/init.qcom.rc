@@ -97,15 +97,6 @@ on init
     chown system system /proc/s1302/key_rep
     chmod 0660 /proc/s1302/key_rep
 
-    chown system system /proc/tri-state-key/keyCode_top
-    chmod 0660 /proc/tri-state-key/keyCode_top
-
-    chown system system /proc/tri-state-key/keyCode_middle
-    chmod 0660 /proc/tri-state-key/keyCode_middle
-
-    chown system system /proc/tri-state-key/keyCode_bottom
-    chmod 0660 /proc/tri-state-key/keyCode_bottom
-
     # GPU Tuning
     chown root system /sys/class/kgsl/kgsl-3d0/dispatch/inflight
     chmod 0660 /sys/class/kgsl/kgsl-3d0/dispatch/inflight

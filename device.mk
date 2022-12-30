@@ -20,7 +20,9 @@ $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/oneplus/oneplus2
+PRODUCT_SOONG_NAMESPACES += \
+    device/oneplus/oneplus2 \
+    hardware/oneplus
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -329,6 +331,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oneplus2
 
+# Tri-state-key
+PRODUCT_PACKAGES += \
+    KeyHandler
+
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
@@ -359,6 +365,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
