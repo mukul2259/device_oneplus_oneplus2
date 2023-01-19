@@ -27,6 +27,3 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
-
-on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "cfq"
