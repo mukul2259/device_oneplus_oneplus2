@@ -85,6 +85,7 @@ dalvik.vm.systemuicompilerfilter=speed
 
 # Graphics
 dev.pm.dyn_samplingrate=1
+debug.sf.predict_hwc_composition_strategy=0
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
 persist.hwc.mdpcomp.enable=true
