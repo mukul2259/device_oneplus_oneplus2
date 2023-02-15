@@ -81,7 +81,6 @@ dalvik.vm.image-dex2oat-threads=4
 dalvik.vm.systemuicompilerfilter=speed
 
 # Graphics
-debug.renderengine.backend=threaded
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
