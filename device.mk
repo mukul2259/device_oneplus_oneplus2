@@ -297,8 +297,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
-    ueventd.qcom.rc \
-    loggy.sh
+    ueventd.qcom.rc
 
 # Recovery
 PRODUCT_PACKAGES += \

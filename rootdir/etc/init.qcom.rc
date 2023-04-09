@@ -732,10 +732,5 @@ service program_bdaddr /vendor/bin/init.program_bdaddr.sh
     disabled
     oneshot
 
-service loggy /system/bin/sh /system/vendor/etc/init/hw/loggy.sh
-    class main
-    user root
-    oneshot
-
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
