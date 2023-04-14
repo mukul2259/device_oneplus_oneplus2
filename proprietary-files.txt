@@ -274,22 +274,18 @@ vendor/lib64/libcrypto_keystore.so|a09a8832939b5e15be00386293854af667e031db
 
 # Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
-vendor/lib/libI420colorconvert.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
-vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib64/libDivxDrm.so
-vendor/lib64/libI420colorconvert.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAmrwbplusDec.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libSHIMDivxDrm.so
-vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal.so
 
 # Media firmware - OxygenOS 3.6.0
