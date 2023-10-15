@@ -9,3 +9,5 @@ allow bluetooth_loader awktool_exec:file rx_file_perms;
 
 allow bluetooth_loader persist_bluetooth_file:dir search;
 allow bluetooth_loader persist_bluetooth_file:file create_file_perms;
+
+get_prop(bluetooth_loader, default_prop)
