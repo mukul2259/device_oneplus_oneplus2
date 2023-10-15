@@ -1,1 +1,3 @@
 allow mm-pp-daemon sysfs_graphics:lnk_file read;
+
+get_prop(mm-pp-daemon, default_prop)
