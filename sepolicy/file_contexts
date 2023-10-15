@@ -1,6 +1,3 @@
-# ADB
-persist.adb.nonblocking_ffs                                             u:object_r:exported_default_prop:s0
-
 # Root files
 /bt_firmware(/.*)?                                                      u:object_r:bt_firmware_file:s0
 
