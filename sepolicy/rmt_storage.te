@@ -1,2 +1,4 @@
 r_dir_file(rmt_storage, sysfs_nv)
 allow rmt_storage self:capability net_raw;
+
+get_prop(rmt_storage, default_prop)
