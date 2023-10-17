@@ -1,3 +1,5 @@
 allow hal_camera_default sysfs_leds:dir { search };
 allow hal_camera_default sysfs_leds:lnk_file { read };
 allow hal_camera_default sysfs_leds:file { read write open };
+
+get_prop(hal_camera_default, default_prop)
