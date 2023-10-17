@@ -1,1 +1,2 @@
 allow hal_camera_default sysfs_leds:dir { search };
+allow hal_camera_default sysfs_leds:lnk_file { search };
