@@ -3,4 +3,6 @@ allow qti_init_shell proc_net:dir r_dir_perms;
 allow qti_init_shell sysfs_android_usb:file write;
 allow qti_init_shell radio_core_data_file:dir create_file_perms;
 
+allow qti_init_shell self:capability { sys_resource }
+
 get_prop(qti_init_shell, default_prop)
