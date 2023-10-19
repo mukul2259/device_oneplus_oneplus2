@@ -8,3 +8,5 @@ allow mm-qcamerad sysfs_laser:lnk_file read;
 userdebug_or_eng(`
   allow mm-qcamerad self:tcp_socket { bind create setopt };
 ')
+
+get_prop(mm-qcamerad, default_prop)
