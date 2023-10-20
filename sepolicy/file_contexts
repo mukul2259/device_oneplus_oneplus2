@@ -32,10 +32,6 @@
 /dev/cpuset(/.*)?                                                       u:object_r:cgroup:s0
 /dev/stune(/.*)?                                                        u:object_r:cgroup:s0
 
-# DRM
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
-/data/vendor/mediadrm(/.*)? u:object_r:mediadrm_vendor_data_file:s0
-
 # Fingerprint
 /sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?       u:object_r:sysfs_fingerprint:s0
 /data/fpc(/.*)?                                                         u:object_r:fingerprintd_data_file:s0
