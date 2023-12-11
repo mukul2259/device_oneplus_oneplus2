@@ -99,6 +99,7 @@ persist.mdpcomp_perfhint=50
 persist.metadata_dynfps.disable=true
 ro.opengles.version=196610
 ro.qualcomm.cabl=0
+ro.hardware.egl=adreno
 
 # IMS
 persist.ims.disableADBLogs=1
