@@ -338,6 +338,12 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-als.so
 vendor/lib64/libmm-qdcm.so
 
+# Protobuf v28 VNDK libs
+vendor/lib/libprotobuf-cpp-lite-v28.so
+vendor/lib/libprotobuf-cpp-full-v28.so
+vendor/lib64/libprotobuf-cpp-lite-v28.so
+vendor/lib64/libprotobuf-cpp-full-v28.so
+
 # QMI - OxygenOS 3.6.0
 bin/irsc_util:vendor/bin/irsc_util
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
