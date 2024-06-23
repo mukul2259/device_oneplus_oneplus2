@@ -380,6 +380,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/WCNSS_qcom_cfg.ini
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_WCNSS_qcom_wlan_nv.bin_symlink \
+    firmware_WCNSS_cfg.dat_symlink \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
+
 ## This is a workaround for the Bluetooth sanitize shadow call stack (SCS)
 ## crash reported here: https://issuetracker.google.com/issues/302408537.
 ## For details of the root cause and the cts vts tests comparison between

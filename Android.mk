@@ -31,31 +31,6 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
-WCNSS_FW := WCNSS_qcom_wlan_nv.bin WCNSS_cfg.dat
-WCNSS_FW_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/,$(notdir $(WCNSS_FW)))
-$(WCNSS_FW_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "WCNSS firmware links: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system/etc/wifi/$(notdir $@) $@
-
-WCNSS_CFG := WCNSS_qcom_cfg.ini
-WCNSS_CFG_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/,$(notdir $(WCNSS_CFG)))
-$(WCNSS_CFG_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "WCNSS configs and firmware links: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system/etc/wifi/$(notdir $@) $@
-
-WCNSS_MAC_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/wlan_mac.bin
-$(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "WCNSS MAC bin link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /persist/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_CFG_SYMLINKS) $(WCNSS_MAC_SYMLINK) $(WCNSS_FW_SYMLINKS)
-
 BT_FIRMWARE := btfw32.tlv btnv32.bin btnv32.b15
 BT_FIRMWARE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(BT_FIRMWARE)))
 $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
