@@ -26,7 +26,7 @@ LOCAL_C_INCLUDES := \
 LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_MODULE := libmmcamera_interface
-LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers libhardware_headers
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
 LOCAL_HEADER_LIBRARIES += camera_common_headers
 LOCAL_MODULE_TAGS := optional
