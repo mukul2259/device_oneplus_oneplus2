@@ -35,7 +35,7 @@
 #include <sys/mman.h>
 #include <utils/Errors.h>
 #include <utils/Trace.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #include <gralloc_priv.h>
 #include <QComOMXMetadata.h>
 #include <OMX_IVCommon.h>
