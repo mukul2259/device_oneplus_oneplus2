@@ -2831,7 +2831,7 @@ int32_t QCamera2HardwareInterface::configureHDRBracketing()
             tmp.append(",");
     }
 
-    if( !tmp.isEmpty() &&
+    if( !tmp.empty() &&
         ( MAX_EXP_BRACKETING_LENGTH > tmp.length() ) ) {
         //Trim last comma
         memset(aeBracket.values, '\0', MAX_EXP_BRACKETING_LENGTH);
