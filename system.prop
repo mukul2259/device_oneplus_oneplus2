@@ -81,7 +81,6 @@ ro.data.large_tcp_window_size=true
 dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.dex2oat-threads=2
 dalvik.vm.image-dex2oat-threads=4
-dalvik.vm.systemuicompilerfilter=speed
 
 # Graphics
 dev.pm.dyn_samplingrate=1
