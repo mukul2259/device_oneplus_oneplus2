@@ -190,3 +190,6 @@ persist.sys.binary_xml=false
 
 # Increase watchdog timeout multiplier to workaround ANRs
 ro.hw_timeout_multiplier=6
+
+# Zygote
+zygote.critical_window.minute=10
