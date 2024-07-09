@@ -48,6 +48,7 @@ bluetooth.enable_timeout_ms=12000
 vendor.qcom.bluetooth.soc=rome
 
 # BPF
+bpf.progs_loaded=1
 ro.kernel.ebpf.supported=false
 
 # Camera
