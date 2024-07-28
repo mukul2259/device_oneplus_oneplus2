@@ -47,6 +47,7 @@ etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
 etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
 etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
+vendor/lib/hw/audio.a2dp.default.so:vendor/lib/hw/audio.a2dp.msm8994.so
 vendor/lib64/libbtnv.so
 
 # Camera - OxygenOS 3.6.0
