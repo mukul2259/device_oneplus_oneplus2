@@ -46,10 +46,14 @@ bluetooth.le.disable_apcf_extended_features=1
 bluetooth.device.default_name=OnePlus 2
 bluetooth.enable_timeout_ms=12000
 vendor.qcom.bluetooth.soc=rome
+persist.bluetooth.bluetooth_audio_hal.disabled=false
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
 
 # BPF
 bpf.progs_loaded=1
 ro.kernel.ebpf.supported=false
+
 
 # Camera
 camera.disable_zsl_mode=true
