@@ -67,9 +67,9 @@ struct offload_link_info
 	uint32_t hdr_hdl;
 };
 
-typedef list<peer_info> peer_info_list;
-typedef list<offload_link_info> offload_link_info_list;
-typedef list<ipacm_event_connection> connection_list;
+typedef std::list<peer_info> peer_info_list;
+typedef std::list<offload_link_info> offload_link_info_list;
+typedef std::list<ipacm_event_connection> connection_list;
 
 struct client_info
 {

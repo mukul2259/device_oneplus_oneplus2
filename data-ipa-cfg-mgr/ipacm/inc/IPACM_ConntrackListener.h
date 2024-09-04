@@ -52,8 +52,6 @@ typedef uint32_t in_addr_t;
 #define MAX_NAT_IFACES 50
 #define MAX_STA_CLNT_IFACES 10
 
-using namespace std;
-
 class IPACM_ConntrackListener : public IPACM_Listener
 {
 
