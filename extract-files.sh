@@ -64,6 +64,9 @@ function blob_fixup() {
     vendor/bin/pm-service)
         grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
     ;;
+    vendor/lib/libshims_boringssl.so|vendor/lib/libshims_boringssl.so)
+        patchelf --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+    ;;
     esac
 }
 
