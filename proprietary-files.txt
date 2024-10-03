@@ -446,7 +446,7 @@ vendor/lib64/librcc.so|661771f4b6c5f26037cc0fb5de83a86c08023995
 vendor/lib64/libvoice-svc.so|238f774a4d0748c40569f6c3c48a87578f79c265
 
 # Radio - IMS - from marlin-user-10-QP1A.191005.007
--vendor/app/ims/ims.apk|9573e35381613673cdf03a71be21770dfea5590a
+-vendor/app/ims/ims.apk|18a316f67d0b7bda3b887b76bca37e01fd2de390
 vendor/lib64/libimscamera_jni.so|7fcd8ddaa6748d8de5de7d49cf5403cb050f4c34
 vendor/lib64/libimsmedia_jni.so|e6b526325e00bb3f80a80b64bd5756c286840009
 
