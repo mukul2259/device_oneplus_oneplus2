@@ -52,8 +52,6 @@ persist.bluetooth.a2dp_offload.disabled=true
 
 # BPF
 bpf.progs_loaded=1
-ro.kernel.ebpf.supported=false
-
 
 # Camera
 camera.disable_zsl_mode=true
