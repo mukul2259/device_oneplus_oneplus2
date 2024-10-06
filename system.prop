@@ -110,6 +110,13 @@ persist.ims.disableIMSLogs=1
 persist.ims.disableQXDMLogs=1
 ro.telephony.block_binder_thread_on_incoming_calls=false
 
+# Low memory killer daemon
+ro.lmk.use_psi=true
+ro.lmk.psi_partial_stall_ms=70
+ro.lmk.psi_complete_stall_ms=400
+ro.lmk.thrashing_limit=0
+ro.lmk.swap_free_low_percentage=20
+
 # OEM Unlocking
 ro.oem_unlock_supported=1
 
