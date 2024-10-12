@@ -61,13 +61,13 @@ write /sys/module/lpm_levels/parameters/sleep_disabled 0
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load 85
-write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 3000
+write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 0
 
 # configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
 write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load 85
-write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 3000
+write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 5000
 write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 0
 
 # plugin remaining A57s
