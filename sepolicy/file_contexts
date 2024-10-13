@@ -45,6 +45,7 @@
 /(vendor|system/vendor)/lib64/libril-qc-qmi-1.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libmm-abl.so                              u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libqmi_cci.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/hw/android.hardware.gnss@1.0-impl.so	u:object_r:same_process_hal_file:s0
 
 # Fingerprint
 /sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?       u:object_r:sysfs_fingerprint:s0
