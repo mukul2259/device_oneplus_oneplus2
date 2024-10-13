@@ -1,4 +1,4 @@
 allow sensors self:capability { net_raw };
-allow sensors system_file:file { getattr };
+allow sensors system_file:file { getattr read };
 
 get_prop(sensors, default_prop)
