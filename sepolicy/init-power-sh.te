@@ -5,7 +5,7 @@ init_daemon_domain(init-power-sh)
 
 # perms for exec script
 allow init-power-sh vendor_shell_exec:file rx_file_perms;
-allow init-power-sh self:capability { chown net_admin };
+allow init-power-sh self:capability { chown net_admin sys_resource };
 
 allow init-power-sh proc_kernel_sched:file w_file_perms;
 allow init-power-sh sysfs:dir { open read };
