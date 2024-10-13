@@ -1,1 +1,1 @@
-allow netmgrd system_file:file { read };
+allow netmgrd system_file:file { read open };
