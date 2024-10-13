@@ -6,3 +6,5 @@ set_prop({
   -webview_zygote
   -hal_configstore_server
 }, diag_prop)
+
+allow domain same_process_hal_file:file { execmod execute getattr map open read };
