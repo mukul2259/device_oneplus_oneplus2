@@ -1,4 +1,10 @@
 allow init sysfs_leds:lnk_file read;
 allow init proc:file write;
+allow init seapp_contexts_file:file read;
+allow init shell_data_file:dir { relabelfrom };
+allow init app_data_file:dir { getattr };
+allow init privapp_data_file:dir { getattr };
+
+allow init adb_data_file:dir { getattr };
 
 allow init sysfs_mmc_host:file w_file_perms;
