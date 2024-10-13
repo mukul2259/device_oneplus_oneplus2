@@ -69,7 +69,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                                                   u:object_r:hal_power_stats_default_exec:s0
 
 # RIL
-/data/oemnvitems(/.*)?                                                  u:object_r:radio_data_file:s0
+/data/oemnvitems(/.*)?                                                  u:object_r:radio_core_data_file:s0
 /sys/devices/soc\.0/6200000\.qcom,nvbackup_sharedmem/uio/uio4(/.*)?     u:object_r:sysfs_nv:s0
 
 # TimeKeep
