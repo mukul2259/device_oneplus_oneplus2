@@ -7,6 +7,7 @@ allow qti_init_shell self:capability { sys_resource };
 
 allow qti_init_shell radio_core_data_file:dir rw_dir_perms;
 allow qti_init_shell radio_core_data_file:dir { remove_name };
-allow qti_init_shell radio_core_data_file:file { read open write getattr setattr unlink };
+
+allow qti_init_shell radio_core_data_file:file { read open write getattr setattr unlink create };
 
 get_prop(qti_init_shell, default_prop)
