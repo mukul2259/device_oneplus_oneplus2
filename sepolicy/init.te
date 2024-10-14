@@ -1,11 +1,5 @@
 allow init sysfs_leds:lnk_file read;
 allow init proc:file write;
-allow init seapp_contexts_file:file read;
-allow init shell_data_file:dir { relabelfrom };
-allow init app_data_file:dir { getattr };
-allow init privapp_data_file:dir { getattr };
-
-allow init adb_data_file:dir r_dir_perms;
 
 allow init sysfs_mmc_host:file w_file_perms;
 
@@ -14,5 +8,19 @@ allow init {
   system_app_data_file
   privapp_data_file
   vold_prepare_subdirs_exec
-}:dir { getattr relabelfrom };;
+  shell_data_file
+  adb_data_file
+}:dir r_dir_perms;
 
+
+allow init {
+  seapp_contexts_file
+  rs_exec
+  dnsmasq_exec
+  runas_exec
+  sdcardd_exec
+  sgdisk_exec
+  simpleperf_app_runner_exec
+  tcpdump_exec
+  vold_prepare_subdirs_exec
+}:file r_file_perms;
