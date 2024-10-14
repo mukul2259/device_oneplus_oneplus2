@@ -24,3 +24,5 @@ allow init {
   tcpdump_exec
   vold_prepare_subdirs_exec
 }:file r_file_perms;
+
+allow init netutils_wrapper_exec:file read;
