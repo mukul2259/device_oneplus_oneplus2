@@ -39,6 +39,9 @@
 /(vendor|system/vendor)/lib/libqmi_encdec.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libsensor_reg.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libqmiservices.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/libqdi.so					u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/libqmi_common_so.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/libdsutils.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/hw/gralloc.msm8994.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/lib-imsvt.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/hw/android.hardware.sensors@1.0-impl.so	u:object_r:same_process_hal_file:s0
@@ -64,6 +67,12 @@
 /(vendor|system/vendor)/lib64/libgps.utils.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libqmi_client_helper.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libmdmdetect.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libdataitems.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libgeofence.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libdsutils.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libqdi.so					u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libqmi_common_so.so			u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/librcc.so					u:object_r:same_process_hal_file:s0
 
 # Fingerprint
 /sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?       u:object_r:sysfs_fingerprint:s0
