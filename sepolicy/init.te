@@ -13,4 +13,6 @@ allow init {
   app_data_file
   system_app_data_file
   privapp_data_file
+  vold_prepare_subdirs_exec
 }:dir { getattr relabelfrom };;
+
