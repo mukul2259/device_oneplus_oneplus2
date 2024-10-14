@@ -1,4 +1,4 @@
 get_prop(thermal-engine, default_prop)
 get_prop(thermal-engine, system_prop)
 
-allow thermal-engine system_file:file { read };
+allow thermal-engine system_file:file rw_file_perms;
