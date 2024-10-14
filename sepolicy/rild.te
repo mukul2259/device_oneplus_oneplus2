@@ -2,8 +2,8 @@ dontaudit rild radio_core_data_file:file rw_file_perms;
 dontaudit rild radio_core_data_file:file { unlink };
 allow rild radio_core_data_file:dir { search remove_name getattr };
 
-allow rild system_data_file:dir { getattr }; 
-allow rild system_file:file { getattr };
+allow rild system_data_file:dir rw_dir_perms; 
+allow rild system_file:file rw_file_perms;
 
 get_prop(rild, vendor_rild_libpath_prop)
 get_prop(rild, default_prop)
