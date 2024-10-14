@@ -24,4 +24,4 @@ get_prop(vendor_init, apexd_prop)
 set_prop(vendor_init, default_prop)
 set_prop(vendor_init, freq_prop)
 set_prop(vendor_init, system_prop)
-
+set_prop(vendor_init, vendor_mpctl_prop)
