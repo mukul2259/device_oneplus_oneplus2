@@ -1,1 +1,1 @@
-allow platform_app vendor_file:file { read };
+allow platform_app vendor_file:file rw_file_perms;
