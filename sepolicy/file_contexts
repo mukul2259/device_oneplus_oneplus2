@@ -36,6 +36,9 @@
 /(vendor|system/vendor)/lib/libmmcamera2_stats_algorithm.so	        u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libmm-abl.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libidl.so					u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/libqmi_encdec.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/libsensor_reg.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/libqmiservices.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/hw/gralloc.msm8994.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/lib-imsvt.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/hw/android.hardware.sensors@1.0-impl.so	u:object_r:same_process_hal_file:s0
@@ -53,6 +56,11 @@
 /(vendor|system/vendor)/lib64/libloc_core.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libidl.so                                 u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libloc_eng.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libqmiservices.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libnetmgr.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libqmi_encdec.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libsensor_reg.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/hw/gps.msm8994.so				u:object_r:same_process_hal_file:s0
 
 # Fingerprint
 /sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?       u:object_r:sysfs_fingerprint:s0
