@@ -450,10 +450,6 @@ vendor/lib64/libvoice-svc.so|238f774a4d0748c40569f6c3c48a87578f79c265
 vendor/lib64/libimscamera_jni.so|7fcd8ddaa6748d8de5de7d49cf5403cb050f4c34
 vendor/lib64/libimsmedia_jni.so|e6b526325e00bb3f80a80b64bd5756c286840009
 
-# Radio - boringssl shim from 13
-vendor/lib/libshims_boringssl.so
-vendor/lib64/libshims_boringssl.so
-
 # Sensors - OxygenOS 3.6.0
 bin/sensors.qcom:vendor/bin/sensors.qcom
 etc/sensors/hals.conf:vendor/etc/sensors/hals.conf

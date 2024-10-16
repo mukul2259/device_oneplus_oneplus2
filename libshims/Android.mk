@@ -55,7 +55,6 @@ LOCAL_MULTILIB := 64
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
-
 LOCAL_SRC_FILES := libshims_postproc.cpp
 LOCAL_CFLAGS := -Wno-unused-parameter
 LOCAL_MODULE := libshims_postproc
