@@ -178,7 +178,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so \
     /system/vendor/lib64/libmm-abl.so|libshims_postproc.so \
-    /system/vendor/lib64/libimsmedia_jni.so|lib-imsvtshim.so
+    /system/vendor/lib64/libimsmedia_jni.so|lib-imsvtshim.so \
+    /system/vendor/lib64/mediadrm/libwvdrmengine.so|libcrypto_shim.so \
+    /system/vendor/lib64/libcrypto_keystore.so|libcrypto_shim.so
 
 # Wifi
 BOARD_WLAN_DEVICE := qcwcn

@@ -271,7 +271,7 @@ etc/firmware/a420_pm4.fw
 
 # Keystore - OxygenOS 3.6.0
 vendor/lib64/hw/keystore.msm8994.so|567487839c061bc76f020ddb7b3e4abe5b2bd93b
-vendor/lib64/libcrypto_keystore.so|68b883155e570b3d93fa56317298b44a19efa032
+vendor/lib64/libcrypto_keystore.so|a09a8832939b5e15be00386293854af667e031db
 
 # Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
@@ -484,7 +484,7 @@ etc/firmware/tp/14049/14049_FW_S1302.img
 etc/firmware/tp/14049/14049_FW_S3320_jdi.img
 
 # Widevine - kanged from Angler OPM3.171019.019
-vendor/lib/mediadrm/libwvdrmengine.so|d4b26a941dc70d005665c297895e02b8da64707c
+vendor/lib/mediadrm/libwvdrmengine.so|fb276a490ee3d630f9ba5ba751b00397a2f6dca0
 
 # Wifi
 bin/cnss-daemon:vendor/bin/cnss-daemon
