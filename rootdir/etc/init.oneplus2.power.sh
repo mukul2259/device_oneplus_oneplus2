@@ -60,12 +60,14 @@ write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
+restorecon -R /sys/devices/system/cpu # must restore after schedutil
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load 85
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 0
 
 # configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
+restorecon -R /sys/devices/system/cpu # must restore after schedutil
 write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load 85
 write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 5000
 write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 0
@@ -77,7 +79,7 @@ write /sys/devices/system/cpu/cpu7/online 1
 
 # Configure core_ctl module parameters
 write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 4
-write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 0
+write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 2
 write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
 write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
 write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms  100
