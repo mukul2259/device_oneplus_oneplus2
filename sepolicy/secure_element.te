@@ -1,1 +1,1 @@
-allow secure_element system_data_file:file { open };
+allow secure_element system_data_file:file rw_file_perms;
