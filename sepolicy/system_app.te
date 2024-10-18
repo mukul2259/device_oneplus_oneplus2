@@ -13,3 +13,4 @@ allow system_app proc_vmallocinfo:file r_file_perms;
 
 binder_call(system_app, hal_power_default)
 binder_call(system_app, wificond)
+binder_call(system_app, hal_wifi_supplicant_default)
