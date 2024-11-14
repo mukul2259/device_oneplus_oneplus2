@@ -23,3 +23,5 @@ allow timekeep_app sysfs_rtc:{ file lnk_file } r_file_perms;
 
 # Set the persist.vendor.timeadjust property
 set_prop(timekeep_app, vendor_timekeep_prop)
+
+allow timekeep_app system_data_file:dir r_dir_perms;
