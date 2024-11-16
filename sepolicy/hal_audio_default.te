@@ -2,3 +2,4 @@ get_prop(hal_audio_default, audio_prop)
 get_prop(hal_audio_default, default_prop)
 
 allow hal_audio_default system_file:file rw_file_perms;
+allow hal_audio_default bluetooth: unix_stream_socket { connectto };
