@@ -275,17 +275,9 @@ vendor/lib64/libcrypto_keystore.so|7b407570b7a19fe29d42c7a9669355bf91d630ef
 
 # Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
 vendor/lib/libmmosal.so
 vendor/lib64/libDivxDrm.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libSHIMDivxDrm.so
 vendor/lib64/libmmosal.so
 
