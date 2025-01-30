@@ -364,7 +364,7 @@ service perfd /vendor/bin/perfd
 service per_mgr /vendor/bin/pm-service
     class late_start
     user system
-    group system
+    group system net_raw
     ioprio rt 4
     task_profiles ServiceCapacityLow
 
