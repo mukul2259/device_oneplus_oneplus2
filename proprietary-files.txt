@@ -75,7 +75,7 @@ vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_debug.so
 vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_algorithm.so|ba1c77c31392adb8415d146cceb537dcf12d2f84
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
@@ -271,7 +271,7 @@ etc/firmware/a420_pm4.fw
 
 # Keystore - OxygenOS 3.6.0
 vendor/lib64/hw/keystore.msm8994.so|567487839c061bc76f020ddb7b3e4abe5b2bd93b
-vendor/lib64/libcrypto_keystore.so|a09a8832939b5e15be00386293854af667e031db
+vendor/lib64/libcrypto_keystore.so|7b407570b7a19fe29d42c7a9669355bf91d630ef
 
 # Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
@@ -334,7 +334,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libmm-abl-oem.so
--vendor/lib64/libmm-abl.so
+-vendor/lib64/libmm-abl.so|92d9faae9a021842bc58eb7e87e96bfe56d9d1e8
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-als.so
 vendor/lib64/libmm-qdcm.so
@@ -409,7 +409,7 @@ vendor/lib64/liblqe.so
 -vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so|0cae643d1d947c8f61bfab8ddd2b645645d31431
 vendor/lib64/libqcmaputils.so
-vendor/lib64/libril-qc-qmi-1.so
+vendor/lib64/libril-qc-qmi-1.so|e5e9e90462dd81edfc55b931bed4c8c859a8644a
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsettings.so|3e459839d90a27d2eb23a3c9d030f46a5c4bfaf1
@@ -435,7 +435,7 @@ vendor/lib64/lib-imsrcscm.so|f783e1ea0dfa84392e92bd00d79b6be9fe4fdc1a
 vendor/lib64/lib-imsrcscmclient.so|5a24f31ed2bd8ebcca68583b2750c3fe9fc8a0b0
 vendor/lib64/lib-imsrcscmservice.so|3cbb7c5437eaea86fab6db8cddce05c3a0b15852
 vendor/lib64/lib-imss.so|f3bc1038d5720da58d1d1eb8e1ed6cec4ad93db4
-vendor/lib64/lib-imsvt.so|52d4ed0e15156e20adfb409eeb2a983108a1357b
+vendor/lib64/lib-imsvt.so|775a651af7d2c85505b2046de50f431d8b4c591e
 vendor/lib64/lib-imsxml.so|babc9429f0291038b6161b212935e03363d5d921
 vendor/lib64/lib-rcsimssjni.so|80faffa65b5060c208fd4bc0085eebf7615fbb3a
 vendor/lib64/lib-rtpcommon.so|16d49c1c1475a4fe9b3d2f7632bc4f199a87c4ce
@@ -448,7 +448,7 @@ vendor/lib64/libvoice-svc.so|238f774a4d0748c40569f6c3c48a87578f79c265
 # Radio - IMS - from marlin-user-10-QP1A.191005.007
 -vendor/app/ims/ims.apk|18a316f67d0b7bda3b887b76bca37e01fd2de390
 vendor/lib64/libimscamera_jni.so|7fcd8ddaa6748d8de5de7d49cf5403cb050f4c34
-vendor/lib64/libimsmedia_jni.so|e6b526325e00bb3f80a80b64bd5756c286840009
+vendor/lib64/libimsmedia_jni.so|98e2ee0147b110ca487863f9e42627cadadabb90
 
 # Sensors - OxygenOS 3.6.0
 bin/sensors.qcom:vendor/bin/sensors.qcom
@@ -480,7 +480,7 @@ etc/firmware/tp/14049/14049_FW_S1302.img
 etc/firmware/tp/14049/14049_FW_S3320_jdi.img
 
 # Widevine - kanged from Angler OPM3.171019.019
-vendor/lib/mediadrm/libwvdrmengine.so|fb276a490ee3d630f9ba5ba751b00397a2f6dca0
+vendor/lib/mediadrm/libwvdrmengine.so|1a8ed1cc38bd33e6a41d1cdd6cd684226e0a3f32
 
 # Wifi
 bin/cnss-daemon:vendor/bin/cnss-daemon

@@ -55,7 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    vendor/lib/libmmcamera2_stats_algorithm.so)
+        patchelf --add-needed "libshim_atomic.so" "${2}"
+    ;;
     vendor/lib/mediadrm/libwvdrmengine.so)
+        "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
         patchelf --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v28.so" "${2}"
     ;;
     vendor/lib64/libsettings.so)
@@ -66,6 +70,22 @@ function blob_fixup() {
     ;;
     vendor/lib64/com.quicinc.cne.api@1.0.so)
         patchelf --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+    ;;
+    vendor/lib64/libcrypto_keystore.so)
+       "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+    ;;
+    vendor/lib64/lib-imsvt.so)
+        patchelf --add-needed "libshims_ims.so" "${2}"
+    ;;
+    vendor/lib64/libmm-abl.so)
+        patchelf --add-needed "libshims_postproc.so" "${2}"
+    ;;
+    vendor/lib64/libril-qc-qmi-1.so)
+        patchelf --add-needed "libaudioclient_shim.so" "${2}"
+        patchelf --add-needed "rild_socket.so" "${2}"
+    ;;
+    vendor/lib64/libimsmedia_jni.so)
+        patchelf --add-needed "lib-imsvtshim.so" "${2}"
     ;;
     esac
 }
