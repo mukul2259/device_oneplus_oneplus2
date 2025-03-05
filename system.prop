@@ -195,3 +195,10 @@ ro.hw_timeout_multiplier=6
 
 # Zygote
 zygote.critical_window.minute=10
+
+# ADB on boot
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+persist.service.debuggable=1
+persist.service.adb.enable=1
