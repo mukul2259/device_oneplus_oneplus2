@@ -485,3 +485,4 @@ vendor/lib/mediadrm/libwvdrmengine.so|fb276a490ee3d630f9ba5ba751b00397a2f6dca0
 # Wifi
 bin/cnss-daemon:vendor/bin/cnss-daemon
 -lib64/libwpa_qmi_eap_proxy.so
+vendor/lib64/libwifi-hal-prebuilt.so|26bac04c3a86d061be751f65b664669ccdef89cd
