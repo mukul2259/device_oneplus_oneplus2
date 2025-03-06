@@ -304,6 +304,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_oneplus2
 
+# RFS symlinks
+PRODUCT_PACKAGES += \
+    rfs_msm_adsp_hlos_symlink_msm8994 \
+    rfs_msm_adsp_ramdumps_symlink_msm8994 \
+    rfs_msm_adsp_readonly_firmware_symlink_msm8994 \
+    rfs_msm_adsp_readwrite_symlink_msm8994 \
+    rfs_msm_adsp_shared_symlink_msm8994 \
+    rfs_msm_mpss_hlos_symlink_msm8994 \
+    rfs_msm_mpss_ramdumps_symlink_msm8994 \
+    rfs_msm_mpss_readonly_firmware_symlink_msm8994 \
+    rfs_msm_mpss_readwrite_symlink_msm8994 \
+    rfs_msm_mpss_shared_symlink_msm8994
+
 # RIL
 PRODUCT_PACKAGES += \
     libaudioclient_shim \

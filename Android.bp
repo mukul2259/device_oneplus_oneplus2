@@ -51,3 +51,73 @@ install_symlink {
     installed_location: "firmware/btnv32.b15",
     symlink_target: "/bt_firmware/image/btnv32.b15",
 }
+
+install_symlink {
+    name: "rfs_msm_adsp_hlos_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/adsp/hlos",
+    symlink_target: "/persist/hlos_rfs/shared",
+}
+
+install_symlink {
+    name: "rfs_msm_adsp_ramdumps_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/adsp/ramdumps",
+    symlink_target: "/data/tombstones/lpass",
+}
+
+install_symlink {
+    name: "rfs_msm_adsp_readonly_firmware_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/adsp/readonly/firmware",
+    symlink_target: "/firmware",
+}
+
+install_symlink {
+    name: "rfs_msm_adsp_readwrite_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/adsp/readwrite",
+    symlink_target: "/persist/rfs/msm/adsp",
+}
+
+install_symlink {
+    name: "rfs_msm_adsp_shared_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/adsp/shared",
+    symlink_target: "/persist/rfs/shared",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_hlos_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/mpss/hlos",
+    symlink_target: "/persist/hlos_rfs/shared",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_ramdumps_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/mpss/ramdumps",
+    symlink_target: "/data/tombstones/modem",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_readonly_firmware_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/mpss/readonly/firmware",
+    symlink_target: "/firmware",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_readwrite_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/mpss/readwrite",
+    symlink_target: "/persist/rfs/msm/mpss",
+}
+
+install_symlink {
+    name: "rfs_msm_mpss_shared_symlink_msm8994",
+    vendor: false,
+    installed_location: "rfs/msm/mpss/shared",
+    symlink_target: "/persist/rfs/shared",
+}
