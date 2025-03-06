@@ -30,3 +30,24 @@ install_symlink {
     installed_location: "etc/firmware/wlan/qca_cld/wlan_mac.bin",
     symlink_target: "/persist/wlan_mac.bin",
 }
+
+install_symlink {
+    name: "bt_firmware_btfw32.tlv_symlink",
+    vendor: true,
+    installed_location: "firmware/btfw32.tlv",
+    symlink_target: "/bt_firmware/image/btfw32.tlv",
+}
+
+install_symlink {
+    name: "bt_firmware_btnv32.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/btnv32.bin",
+    symlink_target: "/bt_firmware/image/btnv32.bin",
+}
+
+install_symlink {
+    name: "bt_firmware_btnv32.b15_symlink",
+    vendor: true,
+    installed_location: "firmware/btnv32.b15",
+    symlink_target: "/bt_firmware/image/btnv32.b15",
+}
