@@ -1,37 +1,29 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2018-2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef ANDROID_HARDWARE_LIGHT_V2_0_LIGHT_H
-#define ANDROID_HARDWARE_LIGHT_V2_0_LIGHT_H
+#pragma once
 
-#include <android/hardware/light/2.0/ILight.h>
-#include <hidl/Status.h>
+#include <aidl/android/hardware/light/BnLights.h>
 
 #include <fstream>
 #include <mutex>
 #include <unordered_map>
 
+using ::aidl::android::hardware::light::BnLights;
+using ::aidl::android::hardware::light::FlashMode;
+using ::aidl::android::hardware::light::HwLight;
+using ::aidl::android::hardware::light::HwLightState;
+using ::aidl::android::hardware::light::LightType;
+
+namespace aidl {
 namespace android {
 namespace hardware {
 namespace light {
-namespace V2_0 {
-namespace implementation {
 
-struct Light : public ILight {
-    Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
+struct Lights : public BnLights {
+    Lights(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
           std::vector<std::ofstream>&& button_backlight,
           std::ofstream&& red_led, std::ofstream&& green_led, std::ofstream&& blue_led,
           std::ofstream&& red_duty_pcts, std::ofstream&& green_duty_pcts, std::ofstream&& blue_duty_pcts,
@@ -42,18 +34,18 @@ struct Light : public ILight {
           std::ofstream&& red_blink, std::ofstream&& green_blink, std::ofstream&& blue_blink,
           std::ofstream&& rgb_blink);
 
-    // Methods from ::android::hardware::light::V2_0::ILight follow.
-    Return<Status> setLight(Type type, const LightState& state) override;
-    Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
+     // Methods from ::aidl::android::hardware::light::BnLights follow.
+     ndk::ScopedAStatus setLightState(int32_t id, const HwLightState& state) override;
+     ndk::ScopedAStatus getLights(std::vector<HwLight> *_aidl_return) override;
 
   private:
-    void setAttentionLight(const LightState& state);
-    void setBatteryLight(const LightState& state);
-    void setButtonsBacklight(const LightState& state);
-    void setLcdBacklight(const LightState& state);
-    void setNotificationLight(const LightState& state);
+    void setAttentionLight(const HwLightState& state);
+    void setBatteryLight(const HwLightState& state);
+    void setButtonsBacklight(const HwLightState& state);
+    void setLcdBacklight(const HwLightState& state);
+    void setNotificationLight(const HwLightState& state);
     void setSpeakerBatteryLightLocked();
-    void setSpeakerLightLocked(const LightState& state);
+    void setSpeakerLightLocked(const HwLightState& state);
 
     std::pair<std::ofstream, uint32_t> mLcdBacklight;
     std::vector<std::ofstream> mButtonBacklight;
@@ -80,18 +72,15 @@ struct Light : public ILight {
     std::ofstream mBlueBlink;
     std::ofstream mRgbBlink;
 
-    LightState mAttentionState;
-    LightState mBatteryState;
-    LightState mNotificationState;
+    HwLightState mAttentionState;
+    HwLightState mBatteryState;
+    HwLightState mNotificationState;
 
-    std::unordered_map<Type, std::function<void(const LightState&)>> mLights;
+    std::unordered_map<LightType, std::function<void(const HwLightState&)>> mLights;
     std::mutex mLock;
 };
 
-}  // namespace implementation
-}  // namespace V2_0
 }  // namespace light
 }  // namespace hardware
 }  // namespace android
-
-#endif  // ANDROID_HARDWARE_LIGHT_V2_0_LIGHT_H
+}  // namespace aidl

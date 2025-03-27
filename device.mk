@@ -235,7 +235,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.oneplus2
+    android.hardware.light-service.oneplus2
 
 # Lineage Health
 PRODUCT_PACKAGES += \
