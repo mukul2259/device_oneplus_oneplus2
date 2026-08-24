@@ -23,7 +23,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus2 \
-    hardware/oneplus
+    hardware/oneplus \
+    hardware/qcom-caf/bt/libbt-vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -243,8 +244,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+    vendor.lineage.livedisplay-service.sysfs
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -373,7 +373,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi-service-lazy
 
 PRODUCT_PACKAGES += \
     ipacm \
