@@ -1757,15 +1757,10 @@ void QCamera3HardwareInterface::deriveMinFrameDuration()
 int64_t QCamera3HardwareInterface::getMinFrameDuration(const camera3_capture_request_t *request)
 {
     bool hasJpegStream = false;
-    bool hasRawStream = false;
     for (uint32_t i = 0; i < request->num_output_buffers; i ++) {
         const camera3_stream_t *stream = request->output_buffers[i].stream;
         if (stream->format == HAL_PIXEL_FORMAT_BLOB)
             hasJpegStream = true;
-        else if (stream->format == HAL_PIXEL_FORMAT_RAW_OPAQUE ||
-                stream->format == HAL_PIXEL_FORMAT_RAW10 ||
-                stream->format == HAL_PIXEL_FORMAT_RAW16)
-            hasRawStream = true;
     }
 
     if (!hasJpegStream)
@@ -4236,38 +4231,37 @@ void QCamera3HardwareInterface::dumpMetadataToFile(tuning_params_t &meta,
         filePath.append(buf);
         int file_fd = open(filePath.c_str(), O_RDWR | O_CREAT, 0777);
         if (file_fd >= 0) {
-            ssize_t written_len = 0;
             meta.tuning_data_version = TUNING_DATA_VERSION;
             void *data = (void *)((uint8_t *)&meta.tuning_data_version);
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_sensor_data_size);
             CDBG("tuning_sensor_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_vfe_data_size);
             CDBG("tuning_vfe_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_cpp_data_size);
             CDBG("tuning_cpp_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_cac_data_size);
             CDBG("tuning_cac_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             meta.tuning_mod3_data_size = 0;
             data = (void *)((uint8_t *)&meta.tuning_mod3_data_size);
             CDBG("tuning_mod3_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            (void)write(file_fd, data, sizeof(uint32_t));
             size_t total_size = meta.tuning_sensor_data_size;
             data = (void *)((uint8_t *)&meta.data);
-            written_len += write(file_fd, data, total_size);
+            (void)write(file_fd, data, total_size);
             total_size = meta.tuning_vfe_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_VFE_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            (void)write(file_fd, data, total_size);
             total_size = meta.tuning_cpp_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_CPP_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            (void)write(file_fd, data, total_size);
             total_size = meta.tuning_cac_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_CAC_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            (void)write(file_fd, data, total_size);
             close(file_fd);
         }else {
             ALOGE("%s: fail to open file for metadata dumping", __func__);

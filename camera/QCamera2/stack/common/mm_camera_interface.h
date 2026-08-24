@@ -69,6 +69,7 @@
   } else { \
     ALOGE("%s:%d] open %s failed", __func__, __LINE__, filename); \
   } \
+  (void)rc; \
 })
 
 /* Declaring Buffer structure */

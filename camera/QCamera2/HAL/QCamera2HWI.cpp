@@ -40,6 +40,7 @@
 #include <utils/Trace.h>
 #include <gralloc_priv.h>
 #include <dlfcn.h>
+#include <system/camera.h>
 
 #include "QCamera2HWI.h"
 #include "QCameraMem.h"
@@ -2330,8 +2331,7 @@ int QCamera2HardwareInterface::startPreview()
 
 int32_t QCamera2HardwareInterface::updatePostPreviewParameters() {
     // Enable OIS only in Camera mode and 4k2k camcoder mode
-    int32_t rc = NO_ERROR;
-    rc = mParameters.updateOisValue(1);
+    mParameters.updateOisValue(1);
     return NO_ERROR;
 }
 
@@ -3778,8 +3778,6 @@ int QCamera2HardwareInterface::takeBackendPic_internal(bool *JpegMemOpt, char *r
  *==========================================================================*/
 void QCamera2HardwareInterface::clearIntPendingEvents()
 {
-    int rc = NO_ERROR;
-
     if (true == m_bIntRawEvtPending) {
         preparePreview();
         startPreview();
@@ -3787,7 +3785,7 @@ void QCamera2HardwareInterface::clearIntPendingEvents()
     if (true == m_bIntJpegEvtPending) {
         if (false == mParameters.isZSLMode()) {
             lockAPI();
-            rc = processAPI(QCAMERA_SM_EVT_START_PREVIEW, NULL);
+            (void)processAPI(QCAMERA_SM_EVT_START_PREVIEW, NULL);
             unlockAPI();
         }
     }
@@ -7561,7 +7559,6 @@ void *QCamera2HardwareInterface::defferedWorkRoutine(void *obj)
 {
     int running = 1;
     int ret;
-    uint8_t is_active = FALSE;
 
     QCamera2HardwareInterface *pme = (QCamera2HardwareInterface *)obj;
     QCameraCmdThread *cmdThread = &pme->mDefferedWorkThread;
@@ -7582,11 +7579,9 @@ void *QCamera2HardwareInterface::defferedWorkRoutine(void *obj)
         switch (cmd) {
         case CAMERA_CMD_TYPE_START_DATA_PROC:
             CDBG_HIGH("%s: start data proc", __func__);
-            is_active = TRUE;
             break;
         case CAMERA_CMD_TYPE_STOP_DATA_PROC:
             CDBG_HIGH("%s: stop data proc", __func__);
-            is_active = FALSE;
             // signal cmd is completed
             cam_sem_post(&cmdThread->sync_sem);
             break;
