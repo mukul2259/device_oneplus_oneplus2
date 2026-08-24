@@ -26,7 +26,7 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "libaudioclient_shim",
+    name: "libaudioclient_shim.msm8994",
     srcs: ["libaudioclient_shim.cpp"],
     shared_libs: ["libaudioclient"],
 }
