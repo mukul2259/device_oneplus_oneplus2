@@ -25,8 +25,10 @@ on init
     chown system system /proc/touchpanel/up_swipe
     chmod 0660 /proc/touchpanel/up_swipe
 
-service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.oneplus2
-    interface vendor.lineage.touch@1.0::IKeyDisabler default
+service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch-service.oneplus2
+    interface aidl vendor.lineage.touch.IKeyDisabler/default
+    interface aidl vendor.lineage.touch.IKeySwapper/default
+    interface aidl vendor.lineage.touch.ITouchscreenGesture/default
     class hal
     user system
     group system
