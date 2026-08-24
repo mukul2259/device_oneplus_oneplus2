@@ -351,7 +351,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus2
+    vendor.lineage.touch-service.oneplus2
 
 # Tri-state-key
 PRODUCT_PACKAGES += \
