@@ -56,16 +56,13 @@ cc_library_shared {
 }
 
 // Pull system libraries used by legacy vendor daemons (netmgrd,
-// imsdatadaemon, mm-pp-daemon) into the vendor linker namespace. These libs
-// are vendor_available, so linking them from this vendor module installs them
-// to the vendor partition where the blobs can find them.
+// imsdatadaemon) into the vendor linker namespace. libnetutils is
+// vendor_available, so linking it from this vendor module installs it to
+// the vendor partition where those blobs can find it.
 cc_library_shared {
     name: "liboneplus2_vendor_compat",
     vendor: true,
     srcs: ["libnetutils_pull.cpp"],
-    shared_libs: [
-        "libnetutils",
-        "libpowermanager",
-    ],
+    shared_libs: ["libnetutils"],
     compile_multilib: "both",
 }

@@ -328,9 +328,8 @@ PRODUCT_PACKAGES += \
     liboneplus2_vendor_compat
 
 # Optional audio HAL impls that android.hardware.audio.service dlopens at
-# runtime (sounddose + bluetooth audio).
+# runtime (bluetooth audio).
 PRODUCT_PACKAGES += \
-    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.bluetooth.audio-impl
 
 # Sensors
