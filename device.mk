@@ -322,6 +322,17 @@ PRODUCT_PACKAGES += \
     libxml2 \
     rild_socket
 
+# Pull libnetutils/libpowermanager into the vendor namespace for the legacy
+# netmgrd / imsdatadaemon / mm-pp-daemon blobs.
+PRODUCT_PACKAGES += \
+    liboneplus2_vendor_compat
+
+# Optional audio HAL impls that android.hardware.audio.service dlopens at
+# runtime (sounddose + bluetooth audio).
+PRODUCT_PACKAGES += \
+    android.hardware.audio.sounddose-vendor-impl \
+    android.hardware.bluetooth.audio-impl
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
