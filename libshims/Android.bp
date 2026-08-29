@@ -68,6 +68,7 @@ cc_library_shared {
         "libhwbinder",
         "libhidlbase",
         "libhidltransport",
+        "libpower",
     ],
     compile_multilib: "both",
 }
