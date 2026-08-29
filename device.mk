@@ -344,8 +344,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcrypto_shim
 
-# Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+# Use 'verify' for the system server so first-boot dexopt (UpdatePackagesIfNeeded
+# via artd) completes in a reasonable time on the slow 4-core msm8994 instead of
+# hanging on boot animation while speed-profile compiles the whole classpath.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := verify
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-profile.txt
 
