@@ -1,5 +1,12 @@
 # system.prop for OnePlus2
 
+# BPF: report a supported kernel version to netd / bpf userspace.
+# The 3.10 kernel cannot pass the Android 16 BPF kernel-version gates, so
+# override the version read by libnetd_updatable / BpfHandler (see
+# packages/modules/Connectivity/bpf/headers/include/bpf/KernelUtils.h).
+# 5.4.x matches the kernel's BPF utsname spoof (CONFIG_ANDROID_TREBLE_SPOOF_BPF_KERNEL_VERSION_PREFIX).
+ro.bpf.kver_override=5.4.300
+
 # Audio
 vendor.audio_hal.period_size=192
 audio.offload.video=true
