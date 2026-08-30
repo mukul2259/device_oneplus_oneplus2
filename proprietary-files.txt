@@ -401,7 +401,7 @@ vendor/lib64/liblqe.so
 -vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so|0cae643d1d947c8f61bfab8ddd2b645645d31431
 vendor/lib64/libqcmaputils.so
-vendor/lib64/libril-qc-qmi-1.so|e5e9e90462dd81edfc55b931bed4c8c859a8644a
+vendor/lib64/libril-qc-qmi-1.so|83ca6d0cea2c159963cd0cb92336f0f0522d62b5
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsettings.so|3e459839d90a27d2eb23a3c9d030f46a5c4bfaf1

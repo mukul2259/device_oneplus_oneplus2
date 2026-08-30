@@ -81,7 +81,7 @@ function blob_fixup() {
         patchelf --add-needed "libshims_postproc.so" "${2}"
     ;;
     vendor/lib64/libril-qc-qmi-1.so)
-        patchelf --add-needed "libaudioclient_shim.so" "${2}"
+        patchelf --add-needed "libaudioclient_shim.msm8994.so" "${2}"
         patchelf --add-needed "rild_socket.so" "${2}"
     ;;
     vendor/lib64/libimsmedia_jni.so)
