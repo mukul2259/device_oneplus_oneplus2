@@ -322,10 +322,12 @@ PRODUCT_PACKAGES += \
     libxml2 \
     rild_socket
 
-# Pull libnetutils/libpowermanager into the vendor namespace for the legacy
-# netmgrd / imsdatadaemon / mm-pp-daemon blobs.
+# Pull libnetutils/libpower/libhwbinder/libhidl into the vendor namespace for
+# legacy netmgrd / imsdatadaemon / mm-pp-daemon / sensors blobs, and provide a
+# minimal libandroid.so so mm-qcamera-daemon can load.
 PRODUCT_PACKAGES += \
-    liboneplus2_vendor_compat
+    liboneplus2_vendor_compat \
+    libandroid_vendor_shim
 
 # Optional audio HAL impls that android.hardware.audio.service dlopens at
 # runtime (bluetooth audio).
@@ -344,10 +346,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcrypto_shim
 
-# Use 'verify' for the system server so first-boot dexopt (UpdatePackagesIfNeeded
-# via artd) completes in a reasonable time on the slow 4-core msm8994 instead of
-# hanging on boot animation while speed-profile compiles the whole classpath.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := verify
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-profile.txt
 

@@ -72,3 +72,14 @@ cc_library_shared {
     ],
     compile_multilib: "both",
 }
+
+// Minimal libandroid.so for the vendor partition so the legacy
+// mm-qcamera-daemon can load (its camera blobs list libandroid as a NEEDED
+// dep but call no libandroid functions). See libandroid_shim.cpp.
+cc_library_shared {
+    name: "libandroid_vendor_shim",
+    vendor: true,
+    output_name: "libandroid",
+    srcs: ["libandroid_shim.cpp"],
+    compile_multilib: "both",
+}
