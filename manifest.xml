@@ -176,29 +176,12 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+<hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
         <interface>
             <name>IOffloadConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IAdaptiveBacklight</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IDisplayColorCalibration</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
     </hal>
