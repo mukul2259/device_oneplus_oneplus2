@@ -9,6 +9,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -23,11 +24,48 @@ namespace_imports = [
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'libqdutils',
+        'libqservice',
+        'libgps.utils',
+        'libloc_core',
+        'libCB',
+        'libloc_api_v02',
+        'libloc_eng',
+        'liblocationservice',
+        'libnetmgr',
+        'libconfigdb',
+        'libmmcamera_interface',
+        'libqdMetaData',
+    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib/libmmcamera2_stats_algorithm.so': blob_fixup()
-        .add_needed('libshim_atomic.so'),
+    ('vendor/lib/libmmcamera2_stats_algorithm.so', 'vendor/lib64/libmmcamera2_stats_algorithm.so'): blob_fixup()
+        .add_needed('libshim_atomic.so')
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
+        .replace_needed('libandroid.so', 'libsensorndkbridge.so')
+        .binary_regex_replace(b'system/lib/hw/sensors.hal.tof.so', b'vendor/lib/hw/sensors.hal.tof.so'),
+    (
+        'lib/libmorpho_video_refiner.so',
+        'lib/libFNVfbEngineLib.so',
+        'vendor/lib/libmmcamera_tintless_bg_pca_algo.so',
+        'vendor/lib/libmmcamera2_is.so',
+        'vendor/lib/libmmcamera_faceproc.so',
+        'vendor/lib/libmmcamera2_frame_algorithm.so',
+        'vendor/lib/libmmcamera_tintless_algo.so',
+        'vendor/lib/libmmcamera_hdr_gb_lib.so',
+        'vendor/lib/libmmcamera2_q3a_core.so',
+        'vendor/lib/libmmcamera_cac2_lib.so',
+        'vendor/lib/libmmcamera_pdaf.so',
+        'vendor/lib/libmmcamera_pdafcamif.so',
+        'vendor/lib64/libmmcamera2_q3a_core.so',
+        'vendor/lib64/libcrypto_keystore.so',
+        'lib64/libopcamera.so',
+        'lib64/libopcameralib.so',
+    ): blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib/mediadrm/libwvdrmengine.so': blob_fixup()
         .add_needed('libcrypto_shim.so')
         .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-v28.so'),

@@ -20,6 +20,7 @@ cc_library_shared {
 
 cc_library_shared {
     name: "libshim_atomic",
+    compile_multilib: "32",
     srcs: ["atomic.cpp"],
     vendor: true,
     header_libs: ["libcutils_headers"],

@@ -122,13 +122,17 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     libbt-vendor
 
-# Camera (disabled: base QCamera2 HAL does not compile under Android 16)
-# PRODUCT_PACKAGES += \
-#     android.hardware.camera.provider@2.4-impl \
-#     android.hardware.camera.provider@2.4-service \
-#     camera.msm8994 \
-#     libshim_atomic \
-#     sensors.hal.tof
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service
+
+PRODUCT_PACKAGES += \
+    camera.msm8994 \
+    libshim_atomic \
+    sensors.hal.tof \
+    libstdc++ \
+    libstdc++_vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
