@@ -373,7 +373,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi-service-lazy
 
 PRODUCT_PACKAGES += \
     ipacm \
