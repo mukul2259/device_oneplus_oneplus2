@@ -46,6 +46,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libril-qc-qmi-1.so': blob_fixup()
         .add_needed('libaudioclient_shim.msm8994.so')
         .add_needed('rild_socket.so'),
+    'vendor/lib64/libcneapiclient.so': blob_fixup()
+        .replace_needed('libhidltransport.so', 'libhidlbase.so')
+        .remove_needed('libhwbinder.so'),
     'vendor/lib64/libimsmedia_jni.so': blob_fixup()
         .add_needed('lib-imsvtshim.so'),
 }  # fmt: skip
