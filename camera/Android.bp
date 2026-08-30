@@ -1,2 +1,0 @@
-# The msm8994 qcom-caf trees here are not namespaced, so no soong_namespace
-# imports are needed.
