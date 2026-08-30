@@ -1,6 +1,2 @@
-soong_namespace {
-    imports: [
-        "hardware/qcom-caf/msm8994/display",
-        "hardware/qcom-caf/msm8994/media"
-    ],
-}
+# The msm8994 qcom-caf trees here are not namespaced, so no soong_namespace
+# imports are needed.
