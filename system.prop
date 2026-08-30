@@ -1,5 +1,8 @@
 # system.prop for OnePlus2
 
+# BPF
+ro.bpf.kver_override=5.4.300
+
 # Audio
 vendor.audio_hal.period_size=192
 audio.offload.video=true
