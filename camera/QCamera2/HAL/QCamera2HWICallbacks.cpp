@@ -2048,6 +2048,8 @@ void QCamera2HardwareInterface::dumpMetadataToFile(QCameraStream *stream,
                 total_size = metadata->tuning_params.tuning_cac_data_size;
                 data = (void *)((uint8_t *)&metadata->tuning_params.data[TUNING_CAC_DATA_OFFSET]);
                 written_len += write(file_fd, data, total_size);
+                CDBG_HIGH("%s: written number of bytes %zd\n",
+                        __func__, written_len);
                 close(file_fd);
             }else {
                 ALOGE("%s: fail t open file for image dumping", __func__);
