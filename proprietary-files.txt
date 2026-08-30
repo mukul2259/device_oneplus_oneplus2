@@ -233,6 +233,8 @@ vendor/lib64/liblocationservice.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libquipc_os_api.so
+vendor/lib64/libstdc++.so
+vendor/lib/libstdc++.so
 vendor/lib/libquipc_os_api.so
 vendor/bin/lowi-server
 vendor/etc/lowi.conf
