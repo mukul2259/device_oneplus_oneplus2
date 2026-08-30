@@ -73,13 +73,27 @@ cc_library_shared {
     compile_multilib: "both",
 }
 
-// Minimal libandroid.so for the vendor partition so the legacy
-// mm-qcamera-daemon can load (its camera blobs list libandroid as a NEEDED
-// dep but call no libandroid functions). See libandroid_shim.cpp.
+// Minimal vendor libandroid.so so the legacy mm-qcamera-daemon / libmm-als
+// blobs can load (they link libandroid and call its ALooper/ASensor API).
+// See libandroid_shim.cpp. Installed as libandroid.so via the install_symlink
+// modules below (a unique module name avoids clashing with the system libandroid).
 cc_library_shared {
-    name: "libandroid_vendor_shim",
+    name: "libandroid_oneplus2_shim",
     vendor: true,
-    output_name: "libandroid",
     srcs: ["libandroid_shim.cpp"],
     compile_multilib: "both",
+}
+
+install_symlink {
+    name: "vendor_libandroid_symlink32",
+    vendor: true,
+    installed_location: "lib/libandroid.so",
+    symlink_target: "libandroid_oneplus2_shim.so",
+}
+
+install_symlink {
+    name: "vendor_libandroid_symlink64",
+    vendor: true,
+    installed_location: "lib64/libandroid.so",
+    symlink_target: "libandroid_oneplus2_shim.so",
 }

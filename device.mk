@@ -324,10 +324,13 @@ PRODUCT_PACKAGES += \
 
 # Pull libnetutils/libpower/libhwbinder/libhidl into the vendor namespace for
 # legacy netmgrd / imsdatadaemon / mm-pp-daemon / sensors blobs, and provide a
-# minimal libandroid.so so mm-qcamera-daemon can load.
+# minimal vendor libandroid.so (libandroid_oneplus2_shim + symlink) so
+# mm-qcamera-daemon / libmm-als can load.
 PRODUCT_PACKAGES += \
     liboneplus2_vendor_compat \
-    libandroid_vendor_shim
+    libandroid_oneplus2_shim \
+    vendor_libandroid_symlink32 \
+    vendor_libandroid_symlink64
 
 # Optional audio HAL impls that android.hardware.audio.service dlopens at
 # runtime (bluetooth audio).
