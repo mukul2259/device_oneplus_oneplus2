@@ -455,13 +455,6 @@ on property:bluetooth.startbtsnoop=true
 on property:bluetooth.startbtsnoop=false
     stop btsnoop
 
-service ppd /vendor/bin/mm-pp-daemon
-    class hal
-    user system
-    socket pps stream 0660 system system
-    group system graphics
-    task_profiles ServiceCapacityLow
-
 on property:vold.decrypt=trigger_restart_framework
     start config_bluetooth
 
