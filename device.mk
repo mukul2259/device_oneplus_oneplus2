@@ -243,8 +243,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+    vendor.lineage.livedisplay-service.sysfs
 
 # Media
 PRODUCT_COPY_FILES += \
