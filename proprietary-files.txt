@@ -212,17 +212,17 @@ etc/firmware/fingerprints.b02
 etc/firmware/fingerprints.b03
 etc/firmware/fingerprints.mdt
 vendor/lib/hw/fingerprint.msm8994.so
-lib/lib_fpc_tac_shared.so
+vendor/lib/lib_fpc_tac_shared.so
 vendor/lib64/hw/fingerprint.msm8994.so
-lib64/lib_fpc_tac_shared.so
+vendor/lib64/lib_fpc_tac_shared.so
 
 # Gatekeeper - OxygenOS 3.6.0
 vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
 # GPS
--lib64/libloc_api_v02.so
--lib64/libloc_ds_api.so
+-lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so
+-lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
@@ -390,7 +390,7 @@ etc/permissions/telephonyservice.xml
 framework/qcnvitems.jar|1ddb327e1a0afa103024f123ac618e6b89f9044d
 framework/qcrilhook.jar|77cb99dce9917a8b80f1f89cd6feac344bff8909
 framework/QtiTelephonyServicelibrary.jar|7c1dd966c584e4f76cb9b7e14755d1f820bd3a90
-lib64/libparam.so
+lib64/libparam.so:vendor/lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|55eab7bdd59841e3622133eb736b536222231e82
 vendor/bin/qti
 vendor/lib64/com.quicinc.cne.api@1.0.so|0fcd53ca62a7e0f25b7bb1bac19ff9d039bac89c
