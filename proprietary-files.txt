@@ -231,6 +231,11 @@ vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_wifihal.so
+vendor/lib64/libquipc_os_api.so
+vendor/lib/libquipc_os_api.so
+vendor/bin/lowi-server
+vendor/etc/lowi.conf
 vendor/lib64/libulp2.so
 
 # Graphics - OxygenOS 3.6.1 + kanged from Angler OPM3.171019.019
