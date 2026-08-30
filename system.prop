@@ -7,6 +7,9 @@
 # 5.4.x matches the kernel's BPF utsname spoof (CONFIG_ANDROID_TREBLE_SPOOF_BPF_KERNEL_VERSION_PREFIX).
 ro.bpf.kver_override=5.4.300
 
+# Material Design 3 expressive (from acroreiser a6010)
+is_expressive_design_enabled=true
+
 # Audio
 vendor.audio_hal.period_size=192
 audio.offload.video=true
